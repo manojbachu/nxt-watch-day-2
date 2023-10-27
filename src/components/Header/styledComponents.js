@@ -11,6 +11,10 @@ export const HeaderContainer = styled.div`
   padding-top: 10px;
   padding-bottom: 10px;
   width: 90%;
+  @media (max-width: 767px) {
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
 `
 
 export const LogoButton = styled.button`
@@ -20,9 +24,9 @@ export const LogoButton = styled.button`
   cursor: pointer;
 `
 export const LogoImage = styled.img`
-  width: 150px;
-  @media (max-width: 576px) {
-    width: 100px;
+  width: 120px;
+  @media (max-width: 767px) {
+    width: 80px;
   }
 `
 
@@ -44,6 +48,9 @@ export const NavElementBtn = styled.button`
 `
 export const ProfileImage = styled.img`
   width: 30px;
+  @media (max-width: 767px) {
+    width: 22px;
+  }
 `
 
 export const LogoutButton = styled.button`
@@ -57,4 +64,17 @@ export const LogoutButton = styled.button`
   font-weight: 500;
   border-radius: 3px;
   font-size: 14px;
+  @media (max-width: 767px) {
+    display: none;
+  }
+`
+export const LogoutIconBtn = styled.button`
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 22px;
+  color: ${props => props.iconClr === 'darkMode' && '#ffffff'};
+  @media (min-width: 767px) {
+    display: none;
+  }
 `

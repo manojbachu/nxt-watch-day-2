@@ -1,7 +1,8 @@
 import {Component} from 'react'
 import {withRouter} from 'react-router-dom'
-import {FiSun} from 'react-icons/fi'
+import {FiSun, FiLogOut} from 'react-icons/fi'
 import {HiMoon} from 'react-icons/hi'
+
 import AppContext from '../../context/AppContext'
 
 import './index.css'
@@ -16,6 +17,7 @@ import {
   NavElementBtn,
   ProfileImage,
   LogoutButton,
+  LogoutIconBtn,
 } from './styledComponents'
 
 class Header extends Component {
@@ -34,7 +36,11 @@ class Header extends Component {
               <HeaderContainer>
                 <LogoButton>
                   <LogoImage
-                    src="https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png"
+                    src={
+                      mode === 'lightMode'
+                        ? 'https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png'
+                        : 'https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-dark-theme-img.png'
+                    }
                     alt="nxt watch logo"
                   />
                 </LogoButton>
@@ -57,7 +63,10 @@ class Header extends Component {
                     </NavElementBtn>
                   </NavElement>
                   <NavElement>
-                    <LogoutButton>Logout</LogoutButton>
+                    <LogoutButton type="button">Logout</LogoutButton>
+                    <LogoutIconBtn iconClr={mode} type="button">
+                      <FiLogOut />
+                    </LogoutIconBtn>
                   </NavElement>
                 </NavElementsContainer>
               </HeaderContainer>

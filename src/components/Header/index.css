@@ -7,3 +7,12 @@
   font-size: 25px;
   font-weight: bold;
 }
+
+@media (max-width: 767px) {
+  .light-theme-icon {
+    font-size: 20px;
+  }
+  .dark-theme-icon {
+    font-size: 20px;
+  }
+}
