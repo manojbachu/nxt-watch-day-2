@@ -52,6 +52,15 @@ export const ProfileImage = styled.img`
     width: 22px;
   }
 `
+export const ProfileButton = styled.button`
+  background: none;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  @media (max-width: 766px) {
+    display: none;
+  }
+`
 
 export const LogoutButton = styled.button`
   background-color: #3b82f6;
@@ -74,6 +83,17 @@ export const LogoutIconBtn = styled.button`
   outline: none;
   font-size: 22px;
   color: ${props => props.iconClr === 'darkMode' && '#ffffff'};
+  @media (min-width: 767px) {
+    display: none;
+  }
+`
+export const HamburgerBtn = styled.button`
+  color: ${props => props.currentMode === 'darkMode' && '#ffffff'};
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 25px;
   @media (min-width: 767px) {
     display: none;
   }
