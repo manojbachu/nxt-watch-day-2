@@ -2,6 +2,7 @@ import {Component} from 'react'
 import {withRouter} from 'react-router-dom'
 import {FiSun, FiLogOut} from 'react-icons/fi'
 import {HiMoon} from 'react-icons/hi'
+import {IoReorderThreeSharp} from 'react-icons/io5'
 
 import AppContext from '../../context/AppContext'
 
@@ -18,6 +19,8 @@ import {
   ProfileImage,
   LogoutButton,
   LogoutIconBtn,
+  HamburgerBtn,
+  ProfileButton,
 } from './styledComponents'
 
 class Header extends Component {
@@ -55,12 +58,15 @@ class Header extends Component {
                     </NavElementBtn>
                   </NavElement>
                   <NavElement>
-                    <NavElementBtn>
+                    <ProfileButton>
                       <ProfileImage
                         src="https://assets.ccbp.in/frontend/react-js/nxt-watch-profile-img.png"
                         alt="profile"
                       />
-                    </NavElementBtn>
+                    </ProfileButton>
+                    <HamburgerBtn currentMode={mode}>
+                      <IoReorderThreeSharp />
+                    </HamburgerBtn>
                   </NavElement>
                   <NavElement>
                     <LogoutButton type="button">Logout</LogoutButton>
