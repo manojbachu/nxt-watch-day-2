@@ -3,6 +3,7 @@ import {withRouter} from 'react-router-dom'
 import {FiSun, FiLogOut} from 'react-icons/fi'
 import {HiMoon} from 'react-icons/hi'
 import {IoReorderThreeSharp} from 'react-icons/io5'
+import Cookies from 'js-cookie'
 
 import AppContext from '../../context/AppContext'
 
@@ -32,6 +33,12 @@ class Header extends Component {
 
           const onClickModeButton = () => {
             onChangeMode()
+          }
+
+          const onLogout = () => {
+            const {history} = this.props
+            Cookies.remove('jwt_token')
+            history.replace('/login')
           }
 
           return (
@@ -69,8 +76,14 @@ class Header extends Component {
                     </HamburgerBtn>
                   </NavElement>
                   <NavElement>
-                    <LogoutButton type="button">Logout</LogoutButton>
-                    <LogoutIconBtn iconClr={mode} type="button">
+                    <LogoutButton type="button" onClick={onLogout}>
+                      Logout
+                    </LogoutButton>
+                    <LogoutIconBtn
+                      iconClr={mode}
+                      type="button"
+                      onClick={onLogout}
+                    >
                       <FiLogOut />
                     </LogoutIconBtn>
                   </NavElement>
