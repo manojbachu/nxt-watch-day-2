@@ -1,6 +1,17 @@
 import {Component} from 'react'
 
-import {HomeContainer, FeaturesContainer} from './styledComponents'
+import {GrFormClose} from 'react-icons/gr'
+import {
+  HomeContainer,
+  FeaturesContainer,
+  VideoSection,
+  PremiumContainer,
+  PremiumSubContainer,
+  NxtWatchLogo,
+  PremiumPara,
+  GetItNowBtn,
+  PremiumAddRemoveBtn,
+} from './styledComponents'
 
 import Header from '../Header'
 
@@ -17,6 +28,23 @@ class Home extends Component {
         <Header />
         <HomeContainer>
           <FeaturesContainer>{this.featuresSection()}</FeaturesContainer>
+          <VideoSection>
+            <PremiumContainer>
+              <PremiumSubContainer>
+                <NxtWatchLogo
+                  src="https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png"
+                  alt="nxt watch logo"
+                />
+                <PremiumPara>
+                  Buy Nxt Watch Premium prepaid plans with UPI
+                </PremiumPara>
+                <GetItNowBtn type="button">GET IT NOW</GetItNowBtn>
+              </PremiumSubContainer>
+              <PremiumAddRemoveBtn type="button">
+                <GrFormClose />
+              </PremiumAddRemoveBtn>
+            </PremiumContainer>
+          </VideoSection>
         </HomeContainer>
       </>
     )
