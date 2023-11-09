@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 export const HomeContainer = styled.div`
-  display: flex;
-  width: 100vw;
+  width: 100%;
+  background-color: #f9f9f9;
 `
 
 export const FeaturesContainer = styled.div`
@@ -19,6 +19,7 @@ export const PremiumContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  background-color: #ffffff;
   @media (min-width: 767px) {
     background-image: url('https://assets.ccbp.in/frontend/react-js/nxt-watch-banner-bg.png');
     background-size: cover;
@@ -29,6 +30,9 @@ export const PremiumSubContainer = styled.div``
 
 export const NxtWatchLogo = styled.img`
   width: 150px;
+  @media (max-width: 767px) {
+    width: 100px;
+  }
 `
 export const PremiumPara = styled.p`
   font-weight: 500;
@@ -36,8 +40,9 @@ export const PremiumPara = styled.p`
   font-size: 20px;
   color: #475569;
   line-height: 35px;
-  @media (min-width: 767px) {
-    width: 420px;
+  max-width: 420px;
+  @media (max-width: 767px) {
+    font-size: 18px;
   }
 `
 
@@ -47,6 +52,10 @@ export const GetItNowBtn = styled.button`
   font-size: 16px;
   padding: 8px 12px 8px 12px;
   margin-top: 10px;
+  @media (max-width: 767px) {
+    font-size: 12px;
+    margin-top: 5px;
+  }
 `
 export const PremiumAddRemoveBtn = styled.button`
   border: none;
@@ -56,3 +65,38 @@ export const PremiumAddRemoveBtn = styled.button`
   font-weight: bold;
   font-size: 26px;
 `
+export const VideosContainer = styled.div`
+  padding: 10px 20px 10px 20px;
+`
+
+export const SearchContainer = styled.div`
+  display: flex;
+  align-items: center;
+`
+
+export const SearchInput = styled.input`
+  border: 2px solid #ebebeb;
+  outline: none;
+  width: 350px;
+  height: 38px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding-left: 14px;
+  padding-right: 14px;
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+`
+
+export const SearchButton = styled.button`
+  background-color: #f1f1f1;
+  height: 38px;
+  border: 2px solid #ebebeb;
+  padding: 5px 30px 5px 30px;
+  color: #475569;
+  font-size: 16px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+`
+export const VideoListContainer = styled.ul``
