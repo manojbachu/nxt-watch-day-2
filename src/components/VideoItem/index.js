@@ -30,7 +30,7 @@ const VideoItem = props => {
         const {mode} = value
         return (
           <VideoCard>
-            <Link to={`/videos/:${id}`} styled="text-decoration: none;">
+            <Link to={`/videos/:${id}`} styled={{"text-decoration": "none"}}>
               <Thumbnail src={thumbnailUrl} alt="video thumbnail" />
               <VideoDetailsContainer>
                 <ProfileImage src={profileImageUrl} alt="channel logo" />
